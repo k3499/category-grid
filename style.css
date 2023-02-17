@@ -1,0 +1,120 @@
+body{
+    font-family: arial;
+}
+.category{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.category-title{
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: #012c56;
+}
+.category-grid{
+    display: grid; 
+    grid-template-columns: 2fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "sip brick stone"
+      "sip n1 n2"; 
+}
+.category-grid__sip{
+    display: block;
+    background: #c2a6a6;
+    grid-area: sip;
+    min-height: 500px;
+}
+.category-grid__brick{
+    position: relative;
+    background: url(images/brick.png) no-repeat right 0 bottom 0px #dfbdae;
+    grid-area: brick;
+    background-size: 85%;
+    overflow: hidden;
+}
+.category-grid__stone{
+    position: relative;
+    background: #a6aec2;
+    grid-area: stone;
+}
+.category-grid__title{
+    color: #342623;
+    position: absolute;
+    display: block;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 35px 0 0 35px;
+    pointer-events: none
+}
+.category-grid__subtitle{
+    display: block;
+}
+.category-grid__brick-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(images/arrow.png) no-repeat right 30px bottom 17px #dfbdae;
+    background-size: 10%;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    transition: 0.15s;
+}
+.category-grid__subcategory{
+    position: absolute;
+    display: none;
+    margin: 98px 0 0 70px;
+    padding: 0;
+    list-style: none;
+}
+.category-grid__sub-item{
+    margin-bottom: 10px;
+}
+.category-grid__sub-link{
+    text-decoration: none;
+    color: #524441;
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+.category-grid__brick:hover .category-grid__subcategory{
+    display: block;
+}
+.category-grid__brick:hover .category-grid__brick-bg{
+    transition: 0.1s;
+    opacity: 1;
+    transition-delay: 0s;
+    visibility: visible;
+}
+.category-grid__brick:hover .category-grid__subtitle{
+    display: inline;
+}
+.category-grid__n1 { 
+    grid-area: n1;
+    background-color: #d8cc8a;
+}
+.category-grid__n2 { 
+    grid-area: n2; 
+    background-color: #9ac4a1;
+}
+.category-grid__bg-circle{
+    width: 105px;
+    height: 114px;
+    position: absolute;
+    display: none;
+    right: 43px;
+    bottom: -22px;
+    background: #b93030;
+    opacity: 0.6;
+    filter: blur(65px);
+    z-index: 2;
+    pointer-events: none
+}
+.category-grid__brick:hover .category-grid__bg-circle{
+    display: block;
+}
