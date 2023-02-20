@@ -17,35 +17,31 @@ body {
   color: #012c56;
 }
 .category-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "stone brick sip"
-    "stone n1 n2";
 }
-.category-grid__item {
-  position: relative;
-  overflow: hidden;
-}
+
 .category-grid__sip {
   background: url(images/brick.png) no-repeat right 0 bottom 0px #f2eddc;
-  background-size: 85%;
+  background-size: 72%;
   grid-area: sip;
 }
 .category-grid__brick {
   background: url(images/brick.png) no-repeat right 0 bottom 0px #eddbd3;
   grid-area: brick;
-  background-size: 85%;
+  background-size: 72%;
 }
 .category-grid__stone {
-  position: relative;
   background: url(images/brick.png) no-repeat right 0 bottom 0px #e3e5ec;
-  background-size: 85%;
+  background-size: 72%;
   grid-area: stone;
-  min-height: 500px;
+}
+.category-grid__item {
+  height: 300px;
+  position: relative;
   overflow: hidden;
+  margin-bottom: 10px;
+}
+.category-grid__item:last-of-type {
+  margin-bottom: 0;
 }
 .category-grid__title {
   color: #342623;
@@ -53,11 +49,11 @@ body {
   display: block;
   font-size: 28px;
   font-weight: 500;
-  margin: 35px 0 0 35px;
+  margin: 20px 0 0 20px;
   pointer-events: none;
 }
 .category-grid__subtitle {
-  display: block;
+  display: inline;
 }
 .category-grid__bg {
   position: absolute;
@@ -83,8 +79,8 @@ body {
 }
 .category-grid__subcategory {
   position: absolute;
-  display: none;
-  margin: 125px 0 0 70px;
+  display: block;
+  margin: 95px 0 0 58px;
   padding: 0;
   list-style: none;
 }
@@ -140,7 +136,64 @@ body {
   height: 145px;
   background: #747b93;
 }
+.category-grid__bg-circle_sip {
+  width: 105px;
+  height: 114px;
+  background: #a28521;
+}
 .category-grid__brick:hover .category-grid__bg-circle,
-.category-grid__stone:hover .category-grid__bg-circle {
+.category-grid__stone:hover .category-grid__bg-circle,
+.category-grid__sip:hover .category-grid__bg-circle {
   display: block;
+}
+@media (min-width: 640px) {
+  .category-grid__stone,
+  .category-grid__sip,
+  .category-grid__brick {
+    background-size: 70%;
+  }
+}
+@media (min-width: 840px) {
+  .category-grid__stone,
+  .category-grid__sip,
+  .category-grid__brick {
+    background-size: 52%;
+  }
+}
+@media (min-width: 1200px) {
+  .category-grid__item {
+    margin-bottom: 0;
+  }
+  .category-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "stone brick sip"
+      "stone n1 n2";
+  }
+  .category-grid__stone {
+    min-height: 500px;
+  }
+  .category-grid__subcategory {
+    display: none;
+  }
+  .category-grid__subtitle {
+    display: block;
+  }
+  .category-grid__title {
+    margin: 35px 0 0 35px;
+  }
+  .category-grid__subcategory {
+    margin: 110px 0 0 58px;
+  }
+  .category-grid__stone,
+  .category-grid__sip,
+  .category-grid__brick {
+    background-size: 85%;
+  }
+  .category-grid__item {
+    height: auto;
+  }
 }
