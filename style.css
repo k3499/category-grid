@@ -167,8 +167,8 @@ body {
   .category-grid__stone,
   .category-grid__sip,
   .category-grid__brick,
-  .category-grid__bg_n1,
-  .category-grid__bg_n2 {
+  .category-grid__n1,
+  .category-grid__n2 {
     background-size: 70%;
   }
 }
@@ -176,8 +176,8 @@ body {
   .category-grid__stone,
   .category-grid__sip,
   .category-grid__brick,
-  .category-grid__bg_n1,
-  .category-grid__bg_n1 {
+  .category-grid__n1,
+  .category-grid__n2 {
     background-size: 52%;
   }
 }
@@ -212,7 +212,8 @@ body {
   .category-grid__stone,
   .category-grid__sip,
   .category-grid__brick,
-  .category-grid__bg_n1 {
+  .category-grid__n1,
+  .category-grid__n2 {
     background-size: 85%;
   }
   .category-grid__item {
