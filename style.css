@@ -20,34 +20,29 @@ body {
 }
 
 .category-grid__sip {
-  background: url(images/sip.png) no-repeat right 0 bottom 0px #f2eddc;
+  background: url(images/sip.png) no-repeat right 0 bottom 0px #fff9e4;
   background-size: 72%;
   grid-area: sip;
 }
 .category-grid__brick {
-  background: url(images/block.png) no-repeat right 0 bottom 0px #eddbd3;
+  background: url(images/block.png) no-repeat right 0 bottom 0px #f5ebe6;
   grid-area: brick;
   background-size: 72%;
 }
 .category-grid__stone {
-  background: url(images/brick.png) no-repeat right 0 bottom 0px #e3e5ec;
+  background: url(images/brick.png) no-repeat right 0 bottom 0px #f4f4f7;
   background-size: 72%;
   grid-area: stone;
 }
 .category-grid__n1 {
-  background: url(images/brick.png) no-repeat right 0 bottom 0px #e3e5ec;
+  background: url(images/garaj.png) no-repeat right 0 bottom 0px #efe3e9;
   background-size: 72%;
-  grid-area: stone;
-}
-.category-grid__n1 {
-  background: url(images/garaj.png) no-repeat right 0 bottom 0px #ebd5e1;
-  background-size: 88%;
   grid-area: n1;
-  background-color: ;
 }
 .category-grid__n2 {
+  background: url(images/etaj.png) no-repeat right 0 bottom 0px #eef3ee;
+  background-size: 72%;
   grid-area: n2;
-  background-color: #e2f0e4;
 }
 .category-grid__item {
   height: 370px;
@@ -82,23 +77,23 @@ body {
 }
 
 .category-grid__bg {
-  background: url(images/arrow.png) no-repeat right 30px bottom 17px #eddbd3;
+  background: url(images/arrow.png) no-repeat right 30px bottom 17px #f5ebe6;
   background-size: 10%;
 }
 .category-grid__bg_stone {
-  background: url(images/arrow.png) no-repeat right 30px bottom 17px #e3e5ec;
+  background: url(images/arrow.png) no-repeat right 30px bottom 17px #f4f4f7;
   background-size: 10%;
 }
 .category-grid__bg_sip {
-  background: url(images/arrow.png) no-repeat right 30px bottom 17px #f2eddc;
+  background: url(images/arrow.png) no-repeat right 30px bottom 17px #fff9e4;
   background-size: 10%;
 }
 .category-grid__bg_n1 {
-  background: url(images/arrow.png) no-repeat right 30px bottom 17px #ebd5e1;
+  background: url(images/arrow.png) no-repeat right 30px bottom 17px #efe3e9;
   background-size: 10%;
 }
 .category-grid__bg_n2 {
-  background: url(images/arrow.png) no-repeat right 30px bottom 17px #e2f0e4;
+  background: url(images/arrow.png) no-repeat right 30px bottom 17px #eef3ee;
   background-size: 10%;
 }
 .category-grid__subcategory {
@@ -158,9 +153,21 @@ body {
   height: 114px;
   background: #a28521;
 }
+.category-grid__bg-circle_n1 {
+  width: 105px;
+  height: 114px;
+  background: #700d3f;
+}
+.category-grid__bg-circle_n2 {
+  width: 105px;
+  height: 114px;
+  background: #228122;
+}
 .category-grid__brick:hover .category-grid__bg-circle,
 .category-grid__stone:hover .category-grid__bg-circle,
-.category-grid__sip:hover .category-grid__bg-circle {
+.category-grid__sip:hover .category-grid__bg-circle,
+.category-grid__n1:hover .category-grid__bg-circle,
+.category-grid__n2:hover .category-grid__bg-circle {
   display: block;
 }
 @media (min-width: 640px) {
